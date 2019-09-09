@@ -16,11 +16,6 @@ contract HeliosElection {
         string y;
     }
     
-    struct Private_Key {
-        string p;
-    }
-    
-    Private_Key private_key;
     Public_Key public_key;
     
     struct Question {
