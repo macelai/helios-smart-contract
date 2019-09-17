@@ -67,5 +67,6 @@ contract Election {
     
     Voters voters_contract;
     Votes votes_contract;
+    Result result_contract;
     
 }
