@@ -1,6 +1,41 @@
 pragma solidity ^0.5.11;
 
-contract HeliosElection {
+contract Result {
+    
+    struct Question {
+        string question;
+        int result;
+    }
+    
+    Question[] questions;
+    string voters_hash;
+    uint256 relesed_at;
+}
+
+contract Votes {
+    
+    struct Vote {
+        string vote_hash;
+        string cast_at;
+    }
+    
+    Votes[] votes;
+    
+}
+
+
+contract Voters{
+    
+    struct Voter {
+        string uuid;
+        string name;
+        string email;
+    }
+    
+    Voters[] voters;
+}
+
+contract Election {
     
     string uuid;
     string name;
@@ -16,6 +51,11 @@ contract HeliosElection {
         string y;
     }
     
+    struct Private_Key {
+        string p;
+    }
+    
+    Private_Key private_key;
     Public_Key public_key;
     
     struct Question {
@@ -25,9 +65,7 @@ contract HeliosElection {
     
     Question[] questions;
     
-    
-    constructor() public {
-
-    }
+    Voters voters_contract;
+    Votes votes_contract;
     
 }
